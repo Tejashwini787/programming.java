@@ -1,4 +1,4 @@
-// Parent class
+
 class Shape {
     // Base method to be overridden
     public double area() {
@@ -6,7 +6,7 @@ class Shape {
     }
 }
 
-// Subclass 1
+
 class Circle extends Shape {
     private double radius;
 
@@ -20,7 +20,7 @@ class Circle extends Shape {
     }
 }
 
-// Subclass 2
+
 class Rectangle extends Shape {
     private double length;
     private double width;
@@ -36,7 +36,7 @@ class Rectangle extends Shape {
     }
 }
 
-// Subclass 3
+
 class Triangle extends Shape {
     private double base;
     private double height;
@@ -52,18 +52,17 @@ class Triangle extends Shape {
     }
 }
 
-// Main execution class
-public class SM {
+
+public class shapemain {
     public static void main(String[] args) {
-        // 1. Create an array of Shape references
+
         Shape[] shapes = new Shape[3];
 
-        // 2. Store objects of all three subclasses in it
-        shapes[0] = new Circle(5.0);          // Circle with radius 5
-        shapes[1] = new Rectangle(4.0, 6.0);  // Rectangle with length 4, width 6
-        shapes[2] = new Triangle(3.0, 8.0);   // Triangle with base 3, height 8
 
-        // 3 & 4. Use a loop to call area() and display the calculated areas
+        shapes[0] = new Circle(5.0);
+        shapes[1] = new Rectangle(4.0, 6.0);
+        shapes[2] = new Triangle(3.0, 8.0);
+
         for (int i = 0; i < shapes.length; i++) {
             System.out.println("Shape " + (i + 1) + " Area: " + shapes[i].area());
         }

@@ -1,4 +1,4 @@
-// InternetPlan class demonstrating constructor chaining
+
 class InternetPlan {
     private String planName;
     private int speedMbps;
@@ -37,8 +37,8 @@ class InternetPlan {
     }
 }
 
-// Main class to run and test the program
-public class inter {
+
+public class internetmain {
     public static void main(String[] args) {
         System.out.println("--- Creating Plan 1 (Using 1-arg constructor) ---");
         InternetPlan plan1 = new InternetPlan("Basic Starter");

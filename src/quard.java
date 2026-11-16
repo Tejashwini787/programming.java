@@ -1,4 +1,4 @@
-// Class representing a Point in a 2D coordinate system
+
 class Point {
 
     private int x;
@@ -6,8 +6,8 @@ class Point {
 
 
     public Point(int x, int y) {
-        this.x = x; // 'this.x' refers to the instance variable, 'x' refers to the parameter
-        this.y = y; // 'this.y' refers to the instance variable, 'y' refers to the parameter
+        this.x = x;
+        this.y = y;
     }
 
 

@@ -1,4 +1,4 @@
-// Class representing a Book in the library
+
 class Book {
     private String title;
     private String author;

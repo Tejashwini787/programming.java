@@ -1,10 +1,10 @@
-// Base Class
+
 class mployee {
     int id;
     String name;
     double basicSalary;
 
-    // Constructor using super parameters
+
     public mployee(int id, String name, double basicSalary) {
         this.id = id;
         this.name = name;
@@ -22,7 +22,7 @@ class mployee {
     }
 }
 
-// Subclass 1: Permanent Employee
+
 class PermanentEmployee extends mployee {
     double allowance;
     double bonus;
@@ -47,7 +47,7 @@ class PermanentEmployee extends mployee {
     }
 }
 
-// Subclass 2: Contract Employee
+
 class ContractEmployee extends mployee {
     int hoursWorked;
     double hourlyRate;
@@ -75,16 +75,16 @@ class ContractEmployee extends mployee {
     }
 }
 
-// Main Execution Class
-public class my {
+
+public class employmain {
     public static void main(String[] args) {
-        // Challenge: Store both types of employees in an Employee[] array
+
         mployee[] employees = new mployee[2];
 
         employees[0] = new PermanentEmployee(101, "Alice Smith", 5000.0, 800.0, 500.0);
         employees[1] = new ContractEmployee(102, "Bob Jones", 120, 45.0);
 
-        // Iterate and polymorphically call calculateSalary() and displayDetails()
+
         System.out.println("--- Employee Payroll Details ---\n");
         for (mployee emp : employees) {
             emp.displayDetails();

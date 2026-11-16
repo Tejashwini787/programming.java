@@ -1,27 +1,27 @@
-// Main.java
+
 import java.util.ArrayList;
 import java.util.List;
 
-// 1. Parent Class: Person
-class Nperson {
-    // Encapsulation: private fields
+
+class Person {
+
     private String name;
     private int age;
 
-    // Static field to keep track of total people created
+
     private static int totalPeopleCount = 0;
 
-    // Final constant for institutional value
+
     public static final String INSTITUTION_NAME = "Global Tech University";
 
-    // Constructor using super() implicitly or explicitly
-    public Nperson(String name, int age) {
+
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
         totalPeopleCount++; // Increment static counter
     }
 
-    // Getters for controlled access
+
     public String getName() {
         return name;
     }
@@ -34,14 +34,14 @@ class Nperson {
         return totalPeopleCount;
     }
 
-    // Method to be overridden
+
     public void displayDetails() {
         System.out.println("Institution: " + INSTITUTION_NAME);
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
     }
 
-    // Overloaded Method Requirement
+
     public void displayDetails(boolean includeHeader) {
         if (includeHeader) {
             System.out.println("--- PERSON PROFILE ---");
@@ -50,12 +50,12 @@ class Nperson {
     }
 }
 
-// 2. Subclass: Student
-class tudent extends Nperson {
+
+class student extends Person {
     private String studentId;
     private String major;
 
-    public tudent(String name, int age, String studentId, String major) {
+    public student(String name, int age, String studentId, String major) {
         super(name, age); // Invoking parent constructor
         this.studentId = studentId;
         this.major = major;
@@ -70,12 +70,12 @@ class tudent extends Nperson {
     }
 }
 
-// 3. Subclass: Faculty
-class Faculty extends Nperson {
+
+class Faculty extends Person {
     private String ployeeId;
     private Department dpartment; // Composition with nested class
 
-    // Nested Class Requirement
+
     public static class Department {
         private String deptName;
         private String blockCode;
@@ -106,8 +106,8 @@ class Faculty extends Nperson {
     }
 }
 
-// 4. Subclass: Administrator
-class Administrator extends Nperson {
+
+class Administrator extends Person {
     private String roleTitle;
 
     public Administrator(String name, int age, String roleTitle) {
@@ -123,15 +123,15 @@ class Administrator extends Nperson {
     }
 }
 
-// Execution Driver
+
 public class Mine {
     public static void main(String[] args) {
-        // Instantiate nested department configuration
+
         Faculty.Department csDept = new Faculty.Department("Computer Science", "Tech-B");
 
-        // Storing subclass objects inside a Person[] array
-        Nperson[] directory = new Nperson[3];
-        directory[0] = new tudent("Alice Johnson", 20, "S101", "Data Science");
+
+        Person[] directory = new Person[3];
+        directory[0] = new student("Alice Johnson", 20, "S101", "Data Science");
         directory[1] = new Faculty("Dr. Robert Smith", 45, "F204", csDept);
         directory[2] = new Administrator("Claire Danes", 38, "Registrar");
 
@@ -139,9 +139,9 @@ public class Mine {
         System.out.println("DEMONSTRATING RUN-TIME POLYMORPHISM");
         System.out.println("=========================================\n");
 
-        // Demonstrate runtime polymorphism using displayDetails() loop
-        for (Nperson Nperson : directory) {
-            Nperson.displayDetails();
+
+        for (Person Person : directory) {
+            Person.displayDetails();
             System.out.println("-----------------------------------------");
         }
 
@@ -153,6 +153,6 @@ public class Mine {
         System.out.println("\n=========================================");
         System.out.println("METADATA STATS");
         System.out.println("=========================================");
-        System.out.println("Total Person Instances Created: " + Nperson.getTotalPeopleCount());
+        System.out.println("Total Person Instances Created: " + Person.getTotalPeopleCount());
     }
 }

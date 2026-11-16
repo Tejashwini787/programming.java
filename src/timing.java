@@ -41,7 +41,7 @@ class Time {
 
 public class timing{
     public static void main(String[] args) {
-        // Invoking the Default Constructor
+
         Time time1 = new Time();
         time1.displayTime();
 

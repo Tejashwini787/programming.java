@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class RectangleArea {
     public static void main(String[] args) {
-        // Create a Scanner object to read data from the console
+
         Scanner scanner = new Scanner(System.in);
 
 
